@@ -1,0 +1,36 @@
+Fixing errors - Dongsoo Lee (Feb 22, 2019)
+
+git clone -b dev https://github.com/baccuslab/spike-sorting.git
+
+1. Change ‘instllmexfiles’
+Edit
+[MATLAB="/Applications/MATLAB_R2018b.app/bin/matlab”]
+
+//2. Comment out [#define UINT16_T] in ‘CrossCorr.cpp’ (/electrical-recording/correlations/spikes/)
+
+2. Change Xcode path (type in Mac OS terminal)
+[sudo xcode-select -s /Applications/Xcode.app/]
+
+3. Change order of [~vector] and [~char16_t] in ‘AutoCorr.app’ (/electrical-recording/correlations/spikes/)
+
+4. Change order of [~vector] in ‘polygon.app’ (/electrical-recording/sorting/clustering/)
+
+5. Brew install armadillo
+
+% about qt
+Note for future
+--
+If you need to have qt first in your PATH run:
+  echo 'export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.bash_profile
+
+For compilers to find qt you may need to set:
+  export LDFLAGS="-L/usr/local/opt/qt/lib"
+  export CPPFLAGS="-I/usr/local/opt/qt/include"
+--
+
+6. 
+$ cd /usr/local/opt/qt/bin/
+$./qmake -project /Users/dlee/spike-sorting/extract
+
+7. cd to /extract/
+$make

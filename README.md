@@ -13,14 +13,14 @@ compiled mex-functions used by the sorting application
 ##### Compiling c++ soure
 Include all the names of the source codes in the list `compile_mex.m` matlab code:
 
-    source_codes = {'AutoCorr.cpp', 'CrossCorr.cpp'};
+    source_codes = {'AutoCorr.cpp', 'CrossCorr.cpp', 'Polygon.cpp'};
   
 Run the following command in the `spike-sorting/matlab` folder to compile c++ source 
 codes into mex-functions in the command line:
 
     ./installmexfiles
 
-extract
+extract (Mac)
 -------
 
 Contains source code for C++ application to extract spike and noise snippets
@@ -46,6 +46,22 @@ To install extract,
 	$ qmake  
 	$ make
 	$ make install # optional  
+
+extract (Linux)
+------
+
+Install required libraries
+
+	$ sudo apt install libhdf5-dev qt5-default
+	$ sudo apt install cmake libopenblas-dev liblapack-dev libarpack2-dev libsuperlu-dev
+	(recommended packes by official armadillo webpage)	
+	$ sudo apt install libarmadillo-dev
+
+To install extract,
+
+	$ cd /path/to/extract/
+	$ qmake
+	$ make
 
 wiki
 ----

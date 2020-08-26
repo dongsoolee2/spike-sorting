@@ -1,4 +1,4 @@
-Fixing errors - Dongsoo Lee (Feb 22, 2019)
+%%% For Mac - Dongsoo Lee (Feb 22, 2019)
 
 git clone -b dev https://github.com/baccuslab/spike-sorting.git
 
@@ -11,9 +11,9 @@ Edit
 2. Change Xcode path (type in Mac OS terminal)
 [sudo xcode-select -s /Applications/Xcode.app/]
 
-3. Change order of [~vector] and [~char16_t] in ‘AutoCorr.app’ (/electrical-recording/correlations/spikes/)
+//3. Change order of [~vector] and [~char16_t] in ‘AutoCorr.app’ (/electrical-recording/correlations/spikes/)
 
-4. Change order of [~vector] in ‘polygon.app’ (/electrical-recording/sorting/clustering/)
+//4. Change order of [~vector] in ‘polygon.app’ (/electrical-recording/sorting/clustering/)
 
 5. Brew install armadillo
 
@@ -34,3 +34,17 @@ $./qmake -project /Users/dlee/spike-sorting/extract
 
 7. cd to /extract/
 $make
+
+
+
+%%% For Ubuntu (Aug 26, 2020)
+0. git clone https://github.com/dongsoolee2/spike-sorting.git
+1. *.cpp files changed for mexing errors
+2. install requirement for "extract" 
+sudo apt install cmake libopenblas-dev liblapack-dev libarpack2-dev libsuperlu-dev libarmadillo-dev libhdf5-dev qt5-default
+3. cd to /extract/
+$qmake
+$make
+4. Edit ./installmexfiles if needed
+5. cd to /matlab/
+$ ./installmexfiles

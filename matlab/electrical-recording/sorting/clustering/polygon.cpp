@@ -1,7 +1,9 @@
-#define char16_t UINT16_T
+//#define char16_t UINT16_T
+#include <uchar.h>
 #include "mex.h"
 #include <math.h>
 #include <vector>
+//#define char16_t UINT16_T
 //#include <sstream>
 
 using namespace std;

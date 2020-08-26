@@ -16,9 +16,12 @@
 *.so
 extract/bin/*
 extract/build/*
+extract/debug/*
+extract/release/*
 *.snip
 *.bin
 *.o
 *.mexmaci64
+*.mexa64
 *.stash
 Makefile*

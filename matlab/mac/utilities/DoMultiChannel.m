@@ -424,7 +424,7 @@ display.hist.x=cell(3,7);
 updatearr(1:3,2:7)=-1;
 updatearr(1:3,1)=0;
 setappdata (hfig,'updatearr',updatearr);
-setappdata(hfig,'dispsnipsallfiles',0)
+setappdata(hfig,'dispsnipsallfiles',0);
 setappdata (hfig,'display',display);
 DoMultiChanFunctions('DefFiltBox',hfig);
 set(haxc(:,1),'Selected','on');	% Start with the unassigned cluster selected

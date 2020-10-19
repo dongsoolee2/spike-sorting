@@ -37,7 +37,7 @@ $make
 
 
 
-%%% For Ubuntu (Aug 26, 2020)
+%%% For Ubuntu 18.04 & 20.04 (Aug 26, 2020)
 0. git clone https://github.com/dongsoolee2/spike-sorting.git
 1. *.cpp files changed for mexing errors
 2. install requirement for "extract" 
@@ -48,3 +48,18 @@ $make
 4. Edit ./installmexfiles if needed
 5. cd to /matlab/
 $ ./installmexfiles
+
+%%% For MacOs Catalina 10.15.7 (Oct 19, 2020)
+0. commnted out <uchar.h> from AutoCorr.cpp, CrossCorr.cpp, polygon.cpp from
+ubuntu version
+1. changed path to matlab of installmexfiles
+2. installed Xcode (hard to use only Command Line Tools without Xcode)
+3. for SDK error:
+        go to /Applications/MATLAB_R2019a.app/bin/maci64/mexopts/
+        edit clang++_maci64.xml & clang_maci64.xml
+            ($chmod 644 clang++_maci64.xml to write)
+        to 
+            <SDKVER>
+                <cmdReturns name="xcrun -sdk macosx --show-sdk-version | cut
+                -c1-5"/>
+            </SDKVER>

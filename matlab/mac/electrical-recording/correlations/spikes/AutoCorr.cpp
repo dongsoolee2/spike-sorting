@@ -1,7 +1,7 @@
 // Compute the autocorrelation function for a set of spikes, represented
 // by a vector of their arrival times
 //#define uint16_T char16_t
-#include <uchar.h>
+//#include <uchar.h>
 #include "mex.h"
 #include <vector>
 

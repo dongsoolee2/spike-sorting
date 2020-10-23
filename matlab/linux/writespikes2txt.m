@@ -27,6 +27,9 @@ clear s;
 %% Find the non-empty channels
 chans = find(~cellfun(@isempty,g.chanclust))
 
+fprintf('experiment with total 100+ spikes will be written in .txt file\n');
+fprintf('session of experiment with zero spike will generate an empty .txt file\n'); 
+
 %% Loop over these channels, writing each spike time
 nchans = length(chans);
 cellidx = 1;
@@ -47,7 +50,8 @@ for ci = 1:nchans
         end
 
         %if ~isempty(g.chanclust{chans(ci)}{x, y})
-        if ~isempty(g.chanclust{chans(ci)}{x, 1})
+        %if ~isempty(g.chanclust{chans(ci)}{x, 1})
+        if length(cell2mat(g.chanclust{chans(ci)}(x, :))) > 100
             % Open a text file for this cell
             fid = fopen(sprintf('c%02d.txt', cellidx), 'wt');
             fprintf(1, 'writing spike times for cell %d ... ', cellidx);

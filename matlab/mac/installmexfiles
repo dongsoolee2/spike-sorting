@@ -51,7 +51,7 @@ else
 	  done
   fi
 fi
-MATLAB="/Applications/MATLAB_R2019a.app/bin/matlab"
+MATLAB="/Applications/MATLAB_R2020b.app/bin/matlab"
 echo "Using MATLAB at path $MATLAB"
 # ************************************ #
 
